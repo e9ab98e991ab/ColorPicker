@@ -3,11 +3,13 @@ package com.github.dhaval2404.colorpicker.adapter
 import android.graphics.Color
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.AppCompatImageView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.github.dhaval2404.colorpicker.R
 import com.github.dhaval2404.colorpicker.model.ColorShape
 import com.github.dhaval2404.colorpicker.util.ColorUtil
 import com.github.dhaval2404.colorpicker.util.setVisibility
-import kotlinx.android.synthetic.main.adapter_material_color_picker.view.*
 
 /**
  * Material Color Listing
@@ -59,8 +61,8 @@ class MaterialColorPickerAdapter(private val colors: List<String>) :
     inner class MaterialColorViewHolder(private val rootView: View) :
         RecyclerView.ViewHolder(rootView) {
 
-        private val colorView = rootView.colorView
-        private val checkIcon = rootView.checkIcon
+        private val colorView = rootView.findViewById<CardView>(R.id.colorView)
+        private val checkIcon = rootView.findViewById<AppCompatImageView>(R.id.checkIcon)
 
         init {
             rootView.setOnClickListener {

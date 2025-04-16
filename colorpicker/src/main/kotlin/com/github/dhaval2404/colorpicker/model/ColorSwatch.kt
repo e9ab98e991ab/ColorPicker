@@ -1,7 +1,7 @@
 package com.github.dhaval2404.colorpicker.model
 
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import java.io.Serializable
 
 /**
  * Used for Color Palette Selection
@@ -10,8 +10,7 @@ import kotlinx.android.parcel.Parcelize
  * @version 1.0
  * @since 24 Dec 2019
  */
-@Parcelize
-enum class ColorSwatch(val value: String) : Parcelable {
+enum class ColorSwatch(val value: String) : Serializable {
     _50("50"),
     _100("100"),
     _200("200"),

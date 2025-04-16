@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.github.dhaval2404.colorpicker.adapter.MaterialColorPickerAdapter
+import com.github.dhaval2404.colorpicker.databinding.DialogBottomsheetMaterialColorPickerBinding
 import com.github.dhaval2404.colorpicker.listener.ColorListener
 import com.github.dhaval2404.colorpicker.listener.DismissListener
 import com.github.dhaval2404.colorpicker.model.ColorShape
@@ -13,7 +14,7 @@ import com.github.dhaval2404.colorpicker.model.ColorSwatch
 import com.github.dhaval2404.colorpicker.util.ColorUtil
 import com.google.android.flexbox.FlexboxLayoutManager
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import kotlinx.android.synthetic.main.dialog_bottomsheet_material_color_picker.*
+import com.hi.dhl.binding.viewbind
 
 /**
  * Color Picker from Predefined color set in BottomSheetDialogFragment
@@ -23,6 +24,7 @@ import kotlinx.android.synthetic.main.dialog_bottomsheet_material_color_picker.*
  * @since 24 Dec 2019
  */
 class MaterialColorPickerBottomSheet : BottomSheetDialogFragment() {
+    private val mBinding: DialogBottomsheetMaterialColorPickerBinding by viewbind()
 
     private var title: String? = null
     private var positiveButton: String? = null
@@ -54,8 +56,8 @@ class MaterialColorPickerBottomSheet : BottomSheetDialogFragment() {
                 putString(EXTRA_NEGATIVE_BUTTON, dialog.negativeButton)
 
                 putString(EXTRA_DEFAULT_COLOR, dialog.defaultColor)
-                putParcelable(EXTRA_COLOR_SWATCH, dialog.colorSwatch)
-                putParcelable(EXTRA_COLOR_SHAPE, dialog.colorShape)
+                putSerializable(EXTRA_COLOR_SWATCH, dialog.colorSwatch)
+                putSerializable(EXTRA_COLOR_SHAPE, dialog.colorShape)
                 putBoolean(EXTRA_IS_TICK_COLOR_PER_CARD, dialog.isTickColorPerCard)
 
                 var list: ArrayList<String>? = null
@@ -98,16 +100,16 @@ class MaterialColorPickerBottomSheet : BottomSheetDialogFragment() {
             negativeButton = it.getString(EXTRA_NEGATIVE_BUTTON)
 
             defaultColor = it.getString(EXTRA_DEFAULT_COLOR)
-            colorSwatch = it.getParcelable(EXTRA_COLOR_SWATCH)!!
-            colorShape = it.getParcelable(EXTRA_COLOR_SHAPE)!!
+            colorSwatch = it.getSerializable(EXTRA_COLOR_SWATCH)!! as ColorSwatch
+            colorShape = it.getSerializable(EXTRA_COLOR_SHAPE)!! as ColorShape
 
             colors = it.getStringArrayList(EXTRA_COLORS)
             isTickColorPerCard = it.getBoolean(EXTRA_IS_TICK_COLOR_PER_CARD)
         }
 
-        title?.let { titleTxt.text = it }
-        positiveButton?.let { positiveBtn.text = it }
-        negativeButton?.let { negativeBtn.text = it }
+        title?.let { mBinding.titleTxt.text = it }
+        positiveButton?.let { mBinding.positiveBtn.text = it }
+        negativeButton?.let { mBinding.negativeBtn.text = it }
 
         val colorList = colors ?: ColorUtil.getColors(requireContext(), colorSwatch.value)
         val adapter = MaterialColorPickerAdapter(colorList)
@@ -117,18 +119,18 @@ class MaterialColorPickerBottomSheet : BottomSheetDialogFragment() {
             adapter.setDefaultColor(defaultColor!!)
         }
 
-        materialColorRV.setHasFixedSize(true)
-        materialColorRV.layoutManager = FlexboxLayoutManager(context)
-        materialColorRV.adapter = adapter
+        mBinding.materialColorRV.setHasFixedSize(true)
+        mBinding.materialColorRV.layoutManager = FlexboxLayoutManager(context)
+        mBinding.materialColorRV.adapter = adapter
 
-        positiveBtn.setOnClickListener {
+        mBinding.positiveBtn.setOnClickListener {
             val color = adapter.getSelectedColor()
             if (color.isNotBlank()) {
                 colorListener?.onColorSelected(ColorUtil.parseColor(color), color)
             }
             dismiss()
         }
-        negativeBtn.setOnClickListener { dismiss() }
+        mBinding.negativeBtn.setOnClickListener { dismiss() }
     }
 
     override fun dismiss() {

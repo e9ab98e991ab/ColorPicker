@@ -1,0 +1,141 @@
+[versions]
+agp = "8.4.0"
+browser = "1.8.0"
+chatkit = "9.7.0"
+commonUi = "1.3.7"
+compiler = "4.16.0"
+converterMoshi = "2.9.0"
+core = "1.13.1"
+coreKtxVersion = "1.7.0"
+coreSplashscreen = "1.0.1"
+danmakuflamemaster = "0.5.3"
+flexbox = "3.0.0"
+glideTransformations = "4.3.0"
+gpuimage = "2.1.0"
+guava = "32.1.3-android"
+immersionbar = "3.2.2"
+kotlin = "1.9.0"
+coreKtx = "1.10.1"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.4.2"
+library = "1.5.1"
+liveeventbus = "1.8.14"
+lottie = "5.0.3"
+material = "1.10.0"
+activity = "1.8.0"
+constraintlayout = "2.1.4"
+moshi = "1.14.0"
+recyclerview = "1.2.1"
+refreshFooterBall = "2.1.0"
+refreshHeaderClassics = "2.1.0"
+refreshHeaderFalsify = "2.1.0"
+refreshHeaderRadar = "2.1.0"
+refreshHeaderTwoLevel = "2.1.0"
+refreshLayoutKernel = "2.1.0"
+retrofitHelper = "1.1.0"
+roundedimageview = "2.3.0"
+rxandroid = "2.1.1"
+rxjava = "2.2.21"
+search = "9.5.0"
+swiperefreshlayout = "1.1.0"
+viewpager2 = "1.1.0"
+xdmap = "9.6.2"
+xfetch2 = "3.1.6"
+xlog = "1.10.1"
+
+[libraries]
+androidx-browser = { module = "androidx.browser:browser", version.ref = "browser" }
+androidx-core = { module = "androidx.core:core", version.ref = "core" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-core-ktx-v170 = { module = "androidx.core:core-ktx", version.ref = "coreKtxVersion" }
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
+androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
+androidx-viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "viewpager2" }
+androidx-xfetch2 = { module = "androidx.tonyodev.fetch2:xfetch2", version.ref = "xfetch2" }
+androidx-xfetch2okhttp = { module = "androidx.tonyodev.fetch2okhttp:xfetch2okhttp", version.ref = "xfetch2" }
+androidx-xfetch2rx = { module = "androidx.tonyodev.fetch2rx:xfetch2rx", version.ref = "xfetch2" }
+chatkit = { module = "com.netease.yunxin.kit.chat:chatkit", version.ref = "chatkit" }
+common-ui = { module = "com.netease.yunxin.kit.common:common-ui", version.ref = "commonUi" }
+converter-moshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "converterMoshi" }
+danmakuflamemaster = { module = "com.github.ctiao:DanmakuFlameMaster", version.ref = "danmakuflamemaster" }
+flexbox = { module = "com.google.android.flexbox:flexbox", version.ref = "flexbox" }
+glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "compiler" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "compiler" }
+glide-transformations = { module = "jp.wasabeef:glide-transformations", version.ref = "glideTransformations" }
+glide-transformations-gpuimage = { module = "jp.co.cyberagent.android:gpuimage", version.ref = "gpuimage" }
+guava = { module = "com.google.guava:guava", version.ref = "guava" }
+immersionbar = { module = "com.geyifeng.immersionbar:immersionbar", version.ref = "immersionbar" }
+immersionbar-ktx = { module = "com.geyifeng.immersionbar:immersionbar-ktx", version.ref = "immersionbar" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+library = { module = "com.jaeger.statusbarutil:library", version.ref = "library" }
+liveeventbus = { module = "com.github.michaellee123:LiveEventBus", version.ref = "liveeventbus" }
+lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
+okhttp3-integration = { module = "com.github.bumptech.glide:okhttp3-integration", version.ref = "compiler" }
+refresh-footer-ball = { module = "io.github.scwang90:refresh-footer-ball", version.ref = "refreshFooterBall" }
+refresh-footer-classics = { module = "io.github.scwang90:refresh-footer-classics", version.ref = "refreshHeaderClassics" }
+refresh-header-classics = { module = "io.github.scwang90:refresh-header-classics", version.ref = "refreshHeaderClassics" }
+refresh-header-falsify = { module = "io.github.scwang90:refresh-header-falsify", version.ref = "refreshHeaderFalsify" }
+refresh-header-material = { module = "io.github.scwang90:refresh-header-material", version.ref = "refreshHeaderClassics" }
+refresh-header-radar = { module = "io.github.scwang90:refresh-header-radar", version.ref = "refreshHeaderRadar" }
+refresh-header-two-level = { module = "io.github.scwang90:refresh-header-two-level", version.ref = "refreshHeaderTwoLevel" }
+refresh-layout-kernel = { module = "io.github.scwang90:refresh-layout-kernel", version.ref = "refreshLayoutKernel" }
+rxandroid = { module = "io.reactivex.rxjava2:rxandroid", version.ref = "rxandroid" }
+rxjava = { module = "io.reactivex.rxjava2:rxjava", version.ref = "rxjava" }
+search = { module = "com.amap.api:search", version.ref = "search" }
+webkit = 'androidx.webkit:webkit:1.9.0'
+
+# Retrofit
+retrofit = 'com.squareup.retrofit2:retrofit:2.9.0'
+converter-gson = 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+# OkHttp
+okhttp = 'com.squareup.okhttp3:okhttp:4.9.3'
+logging-interceptor = 'com.squareup.okhttp3:logging-interceptor:4.9.3'
+
+# Room
+retrofit-helper = { module = "com.github.jenly1314:retrofit-helper", version.ref = "retrofitHelper" }
+room-runtime = "androidx.room:room-runtime:2.5.0"
+room-compiler = "androidx.room:room-compiler:2.5.0"
+
+# ViewModel and LiveData
+lifecycle-livedata = 'androidx.lifecycle:lifecycle-livedata:2.6.2'
+lifecycle-viewmodel-ktx = 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2'
+lifecycle-livedata-ktx = 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.2'
+
+# Coroutines
+kotlinx-coroutines-core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1"
+kotlinx-coroutines-android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1"
+
+autosize = "me.jessyan:autosize:1.2.1"
+binding = "com.hi-dhl:binding:1.2.0"
+mmkv = "com.tencent:mmkv-static:1.2.11"
+koin-android = "io.insert-koin:koin-android:3.5.6"
+koin-android-compat = "io.insert-koin:koin-android-compat:3.5.6"
+
+fragmentationx = "me.xuexuan:fragmentationx:1.0.6"
+roundedimageview = { module = "com.makeramen:roundedimageview", version.ref = "roundedimageview" }
+
+magicIndicator = 'com.github.hackware1993:MagicIndicator:1.7.0'
+androidx-swiperefreshlayout = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swiperefreshlayout" }
+xbanner = 'com.github.xiaohaibin:XBanner:androidx_v1.2.6'
+base_rv_adapter_helper = 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
+xdmap = { module = "com.amap.api:3dmap", version.ref = "xdmap" }
+xlog = { module = "com.elvishew:xlog", version.ref = "xlog" }
+
+basepopup = 'io.github.razerdp:BasePopup:3.2.1'
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlins-parcelize = { id = "kotlin-parcelize", version = "1.9.23" }
+

@@ -1,7 +1,6 @@
 package com.github.dhaval2404.colorpicker.model
 
-import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import java.io.Serializable
 
 /**
  * Used for Color Card Shape
@@ -10,8 +9,7 @@ import kotlinx.android.parcel.Parcelize
  * @version 1.0
  * @since 24 Dec 2019
  */
-@Parcelize
-enum class ColorShape : Parcelable {
+enum class ColorShape : Serializable {
     CIRCLE,
     SQAURE
 }

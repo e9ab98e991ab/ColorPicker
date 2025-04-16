@@ -6,12 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.github.dhaval2404.colorpicker.sample.databinding.ActivityMainBinding
+import com.github.dhaval2404.colorpicker.sample.databinding.FragmentColorPickerBinding
 import com.github.dhaval2404.colorpicker.sample.util.IntentUtil
 import com.google.android.material.tabs.TabLayoutMediator
-import kotlinx.android.synthetic.main.activity_main.*
+import com.hi.dhl.binding.viewbind
 
 class MainActivity : AppCompatActivity() {
-
+    private val mBinding: ActivityMainBinding by viewbind()
     companion object {
 
         private const val GITHUB_REPOSITORY = "https://github.com/Dhaval2404/ColorPicker"
@@ -22,13 +24,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Setup Adapter
-        viewPager.adapter = ViewPagerAdapter(this)
+        mBinding.viewPager.adapter = ViewPagerAdapter(this)
 
         // Disable Swipe
-        viewPager.isUserInputEnabled = false
+        mBinding.viewPager.isUserInputEnabled = false
 
         // Set TabLayout
-        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+        TabLayoutMediator(mBinding.tabLayout, mBinding.viewPager) { tab, position ->
             val title = when (position) {
                 0 -> R.string.action_color_picker
                 else -> R.string.action_material_color_picker
